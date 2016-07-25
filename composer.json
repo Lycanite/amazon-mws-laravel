@@ -20,6 +20,9 @@
     "autoload": {
         "psr-0": {
             "Peron\\AmazonMws": "src/"
+        },
+        "psr-4": {
+            "Peron\\AmazonMwsFullfillment": "src/Peron/AmazonMwsFullfillment"
         }
     },
     "minimum-stability": "stable"
