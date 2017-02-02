@@ -22,7 +22,7 @@
             "Peron\\AmazonMws": "src/"
         },
         "psr-4": {
-            "Peron\\AmazonMwsFullfillment": "src/Peron/AmazonMwsFullfillment"
+            "Peron\\AmazonMwsFullfillment\\": "src/Peron/AmazonMwsFullfillment"
         }
     },
     "minimum-stability": "stable"
