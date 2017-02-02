@@ -196,9 +196,9 @@
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetShipmentResponse']");
         if ($response->length == 1) {
             return new MWSMerchantFulfillmentService_Model_GetShipmentResponse(($response->item(0)));

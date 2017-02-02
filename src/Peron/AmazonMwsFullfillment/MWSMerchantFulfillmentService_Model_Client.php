@@ -231,8 +231,7 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetShipment';
         $httpResponse = $this->_invoke($parameters);
-
-        require_once (dirname(__FILE__) . '/Model/GetShipmentResponse.php');
+        
         $response = MWSMerchantFulfillmentService_Model_GetShipmentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;

@@ -144,7 +144,7 @@ class AmazonFullfillment
 
 
     /**
-	 *    Get Shipping Services - Returns a list of available shipping services for the provided order details.
+	 *    Create Shipment - Creates the shipment.
 	 **/
     public function createShipment($serviceID)
     {
@@ -153,5 +153,17 @@ class AmazonFullfillment
         $request->setShipmentRequestDetails($this->getShipmentRequestDetails());
         $request->setShippingServiceId($serviceID);
         return $this->service->CreateShipment($request);
+    }
+
+
+    /**
+	 *    Get Shipment - Gets an existing shipment from the provided shipment ID.
+	 **/
+    public function getShipment($shipmentId)
+    {
+        $request = new MWSMerchantFulfillmentService_Model_GetShipmentRequest();
+        $request->setSellerId($this->sellerID);
+        $request->setShipmentId($shipmentId);
+        return $this->service->GetShipment($request);
     }
 }
